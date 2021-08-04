@@ -1,0 +1,1 @@
+### React Study Project by Polina Moore and Rafika Turemis
