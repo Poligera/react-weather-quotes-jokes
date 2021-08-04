@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { CityEntryForm } from './components';
 
 
 
@@ -7,9 +7,9 @@ import React from 'react';
 const App = () => {
     return(
         <>
-        
+            <CityEntryForm />
         </>
-    )
+    );
 }
 
 
