@@ -1,13 +1,11 @@
 import React from 'react';
-import { CityEntryForm } from './components';
-
-
+import { Weather } from './pages';
 
 
 const App = () => {
     return(
         <>
-            <CityEntryForm />
+            <Weather />
         </>
     );
 }

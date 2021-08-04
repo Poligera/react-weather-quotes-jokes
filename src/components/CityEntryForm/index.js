@@ -8,6 +8,8 @@ const CityEntryForm = () => {
 
     const handleFormSubmit = e => {
         e.preventDefault();
+        updateCity(cityInput); // a function coming from props // need to define "updateCity" function on Weather page!!!
+        
         setCityInput("");
     }
 

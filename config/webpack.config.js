@@ -30,7 +30,7 @@ const config = {
     new HtmlWebpackPlugin({
       // used to add the JavaScript code to the HTML
       template: path.join(PUBLIC_DIRECTORY, 'index.html'),
-    }),
+    })
   ],
   module: {
     // helpers we want webpack to use
