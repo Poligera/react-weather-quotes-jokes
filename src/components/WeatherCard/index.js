@@ -1,15 +1,29 @@
 import React, { useState, useEffect } from 'react';
-import { CityEntryForm } from '..';
 import axios from 'axios';
-import env from 'react-dotenv';
 const apiKey = '599c3a748e5fe4204e77f7a454460ef2';
-const API_URL = `https://api.openweathermap.org/data/2.5/forecast/daily?q=${cityInput}&cnt=3&appid=${apiKey}`;
 
-const WeatherCard = () => {
+const WeatherCard = ({cityDetails}) => {
+    const [ weather, setWeather ] = useState([]);
+    const [ error, setError ] = useState();
+
+    const API_URL = `https://api.openweathermap.org/data/2.5/forecast/daily?q=${cityDetails}&cnt=3&appid=${apiKey}`;
+
+    useEffect(() => {
+        const fetchWeather = async() => {
+            try {
+                let {list} = await axios.get(API_URL);
+            }
+            catch {
+
+            }
+        }
+    })
+
     return (
         <div>
-            <h1>I am a weather card!</h1>
-            <p></p>
+            <p>
+                You have entered <strong>{cityDetails||'*city*'}</strong>
+                </p>
         </div>
     )
 }
