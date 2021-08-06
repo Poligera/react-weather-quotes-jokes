@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-// import index from '.';
+import './style.css';
 // import Card from '.';
 
 const WeatherCards = ({cityDetails}) => {
@@ -16,8 +16,7 @@ const WeatherCards = ({cityDetails}) => {
                         const description = day.weather[0].description;
                         const temp = Math.trunc(day.main.temp - 273.15);
                         const icon = `http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png`;
-                        // return {day, description, temp, icon}
-                        return `Day: ${dayIndex}: ${description}, temperature: ${temp}C, ${icon}`
+                        return {dayIndex, description, temp, icon};
                     }
                 );
                 // console.log(array);
@@ -38,8 +37,13 @@ const WeatherCards = ({cityDetails}) => {
             </p>
             <ul>
                 {
-                    weather.map((day, index) => (
-                        <li key={index}>{day}</li>
+                    weather.map((day) => (
+                        <div key={day.dayIndex} className='card'>
+                            <li>Day {day.dayIndex}</li>
+                            <img src={day.icon}></img>
+                            <li>{day.description}, {day.temp}C</li>
+                            <br></br>
+                        </div>
                     ))
                 }
             </ul>
