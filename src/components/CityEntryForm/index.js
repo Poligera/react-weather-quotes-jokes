@@ -18,7 +18,7 @@ const CityEntryForm = ({ updateCity }) => {
         <>
             <form role="form" aria-label="city form" onSubmit={handleFormSubmit}>
                 <label htmlFor="cityName">Enter a city</label>
-                <input type="text" id="cityName" name="cityName" placeholder="Type in a city" value={cityInput} onChange={handleInput}/>
+                <input type="text" id="cityName" name="cityName" placeholder="Type in a city" onMouseOver={e => e.target.placeholder=''} onMouseOut={e => e.target.placeholder="Type in a city"} value={cityInput} onChange={handleInput}/>
                 <input type="submit" value="SUBMIT"/>
             </form>
         </>
