@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CityEntryForm, WeatherCard } from '../../components';
+import { CityEntryForm, WeatherCards } from '../../components';
 
 const Weather = () => {
     const [inputCityInfo, setInputCityInfo ] = useState("");
@@ -12,7 +12,7 @@ const Weather = () => {
     return(
         <div className="weatherParent">
             <CityEntryForm updateCity={updateCity}/>
-            <WeatherCard cityDetails={inputCityInfo}/>
+            <WeatherCards cityDetails={inputCityInfo}/>
         </div>
     )
 }
