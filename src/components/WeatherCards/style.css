@@ -21,7 +21,7 @@ ul {
     background-color: lightgrey;
     text-align: center;
     border-radius: 10px;
-    width: fit-content;
+    width: 6rem;
 }
 
 li {
@@ -29,4 +29,3 @@ li {
     display: block;
     font-weight: bold;
 }
-
