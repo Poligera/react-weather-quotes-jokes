@@ -1,29 +1,28 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-const apiKey = '599c3a748e5fe4204e77f7a454460ef2';
 
 const WeatherCard = ({cityDetails}) => {
-    const [ weather, setWeather ] = useState([]);
-    const [ error, setError ] = useState();
+    const [ weather, setWeather ] = useState();
+    // const [ error, setError ] = useState();
 
-    const API_URL = `https://api.openweathermap.org/data/2.5/forecast/daily?q=${cityDetails}&cnt=3&appid=${apiKey}`;
+    // const apiKey = '599c3a748e5fe4204e77f7a454460ef2';
+
+    // const API_URL = `https://api.openweathermap.org/data/2.5/weather?q=${cityDetails}&APPID=599c3a748e5fe4204e77f7a454460ef2`;
 
     useEffect(() => {
         const fetchWeather = async() => {
-            try {
-                let {list} = await axios.get(API_URL);
+            let data = await axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=${cityDetails}&cnt=5&APPID=599c3a748e5fe4204e77f7a454460ef2`);
+            console.log(data);
+            // setWeather(data);
             }
-            catch {
-
-            }
-        }
-    })
+            fetchWeather();
+    }, [cityDetails])
 
     return (
         <div>
             <p>
                 You have entered <strong>{cityDetails||'*city*'}</strong>
-                </p>
+            </p>
         </div>
     )
 }
