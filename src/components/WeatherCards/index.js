@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './style.css';
-// import Card from '.';
 
 const WeatherCards = ({cityDetails}) => {
     const [ weather, setWeather ] = useState([]);
