@@ -36,7 +36,6 @@ const WeatherCards = ({cityDetails}) => {
             }
         }
     ))
-    console.log(cardContent);
 }
 
     const renderCards = (content) => content.map(day => <Card cardContent={day} addImg={addOrRemoveImg}/>);
