@@ -29,7 +29,7 @@ const WeatherCards = ({cityDetails}) => {
 
     const addOrRemoveImg = () => {
         const windowWidth = window.innerWidth;
-        const windowHeight = window.innerHeight - 20;
+        const windowHeight = window.innerHeight - 100;
         const randomNum = Math.trunc(Math.random()*100);
         setCardContent(prev => prev.map(el => {
             if(el.img === '') {
