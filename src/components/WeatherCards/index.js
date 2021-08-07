@@ -33,18 +33,17 @@ const WeatherCards = ({cityDetails}) => {
             <p>
                 You have entered <strong>{cityDetails||'*city*'}</strong>
             </p>
-            <ul>
+            <>
                 {
                     weather.map((day) => (
-                        <div key={day.dayIndex} className='card'>
+                        <ul key={day.dayIndex} className='card'>
                             <li>Day {day.dayIndex}</li>
-                            <img src={day.icon}></img>
+                            <li><img src={day.icon}/></li>
                             <li>{day.description}, {day.temp}C</li>
-                            <br></br>
-                        </div>
+                        </ul>
                     ))
                 }
-            </ul>
+            </>
         </div>
     )
 }

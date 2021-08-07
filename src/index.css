@@ -40,23 +40,20 @@ input[type=submit]:active {
     margin: 0 1rem;
 }
 
-ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
 .card {
     margin: 2rem;
     padding: 2rem;
     background-color: lightgrey;
     text-align: center;
     border-radius: 10px;
-    width: 12rem;
+    width: 10rem;
+    height: 14rem;
+    font-weight: bold;
+    display: inline-block;
 }
 
 li {
     list-style: none;
-    display: block;
-    font-weight: bold;
+
+
 }

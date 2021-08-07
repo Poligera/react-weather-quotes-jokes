@@ -10,7 +10,7 @@ const Weather = () => {
     }
 
     return(
-        <div className="weatherParent">
+        <div className='cards'>
             <h1>Welcome to 5-Day Weather!</h1>
             <CityEntryForm updateCity={updateCity}/>
             <WeatherCards cityDetails={inputCityInfo}/>
