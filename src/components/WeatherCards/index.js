@@ -46,7 +46,8 @@ const WeatherCards = ({cityDetails}) => {
             <p>
                 You have entered <strong>{cityDetails||'*city*'}</strong>
             </p>
-                {renderCards(cardContent)}
+                {renderCards(cardContent)} 
+            <p><i>You will see 5 weather cards. <br></br>Click on any card to get a nice random image. <br></br> Click on the image to close it.</i></p>
         </div>
     )
 }
