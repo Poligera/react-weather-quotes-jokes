@@ -28,17 +28,18 @@ const WeatherCards = ({cityDetails}) => {
     }, [cityDetails])
 
     const addOrRemoveImg = () => {
+        const windowWidth = window.innerWidth;
+        const windowHeight = window.innerHeight - 20;
+        const randomNum = Math.trunc(Math.random()*100);
         setCardContent(prev => prev.map(el => {
             if(el.img === '') {
-                return el = {...el, img: 'https://loremflickr.com/200/300'}
-            } else {
-                return el = {...el, img: ''}
-            }
-        }
-    ))
-}
+                return el = {...el, img: `https://picsum.photos/${windowWidth}/${windowHeight}?random=${randomNum}`}} else {
+                return el = {...el, img: ''}}
+            })
+        )
+    }
 
-    const renderCards = (content) => content.map(day => <Card cardContent={day} addImg={addOrRemoveImg}/>);
+    const renderCards = (content) => content.map(day => <Card cardContent={day} addImg={addOrRemoveImg} key={day.dayIndex} />);
 
     return (
         <div>
