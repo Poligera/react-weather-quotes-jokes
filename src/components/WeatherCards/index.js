@@ -29,7 +29,7 @@ const WeatherCards = ({cityDetails}) => {
 
     const addOrRemoveImg = () => {
         const windowWidth = window.innerWidth;
-        const windowHeight = window.innerHeight - 100;
+        const windowHeight = window.innerHeight - 50;
         const randomNum = Math.trunc(Math.random()*100);
         setCardContent(prev => prev.map(el => {
             if(el.img === '') {
@@ -47,7 +47,7 @@ const WeatherCards = ({cityDetails}) => {
                 You have entered <strong>{cityDetails||'*city*'}</strong>
             </p>
                 {renderCards(cardContent)} 
-            <p><i>You will see 5 weather cards. <br></br>Click on any card to get a nice random image. <br></br> Click on the image to close it.</i></p>
+            <p><i>Click on any card to get a nice random image. <br></br> Click on the image to close it.</i></p>
         </div>
     )
 }
