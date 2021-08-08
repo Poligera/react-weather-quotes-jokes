@@ -15,20 +15,33 @@ nav {
   padding: 30px;
   display: flex;
   justify-content: space-around;
+  font-weight: bold;
 }
 
 .current {
-  color: goldenrod;
+  color: white;
   font-weight: bolder;
+  background-color: gray;
+  border: none;
 }
 
-a {
+nav a {
+  text-decoration: none;
+  background-color: rgb(250, 250, 211);
+  padding: 0.3rem 1rem;
+  border-radius: 10px;
+  border: 3px gold solid;
+}
+
+p a {
   text-decoration: none;
 }
 
 #back-button {
   display: block;
   margin: auto;
+  margin: 2rem auto;
+  cursor: pointer;
 }
 
 form {
@@ -83,4 +96,37 @@ input[type='submit']:active {
 
 li {
   list-style: none;
+}
+
+#back-button {
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  background-color: rgb(247, 206, 103);
+  font-weight: bold;
+}
+
+a:active {
+  font-size: larger;
+  cursor: pointer;
+}
+
+button:active {
+  font-size: 180%;
+}
+
+.countryButton {
+  padding: 0.5rem 1.5rem;
+  margin: 1rem auto;
+  width: auto;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 30px;
+  border: 1px solid;
+  font-size: 1.5rem;
+}
+
+#country-data {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
 }

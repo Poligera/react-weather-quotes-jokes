@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { CountryButton } from '../../components';
 
 const CountryData = () => {
-  const [country, setCountry] = useState([]);
+  // const [countries, setCountry] = useState([]);
   //   const [statusMessage, setStatusMessage] = useState('Loading...');
   const leastVisitedCountries = [
     { country: 'Tuvalu', code: 'TV' },
@@ -15,11 +15,12 @@ const CountryData = () => {
   ];
 
   return (
-    <>
+    <div id="country-data">
+      <p><i>Here are some least-known countries:</i></p>
       {leastVisitedCountries.map((el) => (
-        <CountryButton country={el.country} />
+        <CountryButton country={el.country} code={el.code}/>
       ))}
-    </>
+    </div>
   );
 };
 

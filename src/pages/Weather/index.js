@@ -3,7 +3,6 @@ import { CityEntryForm, WeatherCards } from '../../components';
 
 const Weather = () => {
     const [inputCityInfo, setInputCityInfo ] = useState("");
-    console.log(inputCityInfo);
 
     const updateCity = (value) => {
         setInputCityInfo(value);
