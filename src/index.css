@@ -105,6 +105,15 @@ li {
   font-weight: bold;
 }
 
+.countButton {
+  width: 3rem;
+  font-weight: bold;
+  padding: 0.2rem 1rem;
+  cursor: pointer;
+  margin: auto;
+}
+
+
 a:active {
   font-size: larger;
   cursor: pointer;
@@ -129,4 +138,12 @@ button:active {
   display: flex;
   flex-direction: column;
   margin: auto;
+}
+
+#counter {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  justify-content: space-around;
+  width: 15vw;
 }

@@ -15,6 +15,9 @@ const Header = () => {
         <NavLink to="/quotes" activeClassName="current">
           Quotes
         </NavLink>
+        <NavLink to="/counter" activeClassName="current">
+          Counter
+        </NavLink>
         <NavLink to="/countries" activeClassName="current">
           Discover Unknown Countries!
         </NavLink>
