@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
-// We need name, capital, region, currency(code, name, symbol), language.name
-
 const Country = () => {
     const [ country, setCountry ] = useState();
     const [ statusMessage, setStatusMessage ] = useState('Loading');
