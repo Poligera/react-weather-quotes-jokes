@@ -25,7 +25,7 @@ const CountryData = () => {
                  <i>Here are some least-known countries:</i>
               </p>
               {leastVisitedCountries.map((el) => (
-                <CountryButton country={el.country} code={el.code} handleButtonClick={loadChosenCountry}/>
+                <CountryButton key={el.code} country={el.country} code={el.code} handleButtonClick={loadChosenCountry}/>
               ))}
               </div>
           </Route>
