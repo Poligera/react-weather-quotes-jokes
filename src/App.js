@@ -7,16 +7,15 @@ import './index.css';
 
 const App = () => {
   const [color, setColor] = useState('auto');
-  const colorArray = ['auto', '#C6AC85', '#E2E5CB', '#D9C2BD', '#A2C4C6', '#82B2B8'];
+  const colorArray = ['#C6AC85', '#E2E5CB', '#D9C2BD', '#A2C4C6', '#82B2B8', '#CCD4BF', '#E7CBA9', '#EEBAB2', '#F5F3E7', '#F5E2E4'];
 
   useEffect(() => {
     const changeColor = () => {
-      let randomNum = Math.floor(Math.random()*6 + 1);
+      let randomNum = Math.floor(Math.random()*11 + 1);
       setColor(colorArray[randomNum]);
       document.body.style.backgroundColor = color;
   } 
-    const colorStream = setInterval(changeColor, 5000); 
-    console.log(color);
+    const colorStream = setInterval(changeColor, 3000); 
     return () => clearInterval(colorStream);
   }, [color]);
 
