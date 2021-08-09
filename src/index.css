@@ -124,8 +124,8 @@ button:active {
 }
 
 .countryButton {
-  padding: 0.5rem 1.5rem;
-  margin: 1rem auto;
+  padding: 0.1rem 0.4rem;
+  margin: 0.2rem auto;
   width: auto;
   text-align: center;
   cursor: pointer;
@@ -138,6 +138,10 @@ button:active {
   display: flex;
   flex-direction: column;
   margin: auto;
+}
+
+.country {
+  margin: auto
 }
 
 #counter {
